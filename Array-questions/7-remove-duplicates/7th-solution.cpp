@@ -11,24 +11,18 @@ using namespace std;
 class Solution {
   public:
     int remove_duplicate(vector<int> &arr) {
-        vector<int>ans;
+         int i=0;
         
-        ans.push_back(arr[0]);
-        
-        for(int i=1; i<arr.size(); i++)
+        for(int j=1; j<arr.size(); j++)
         {
-            if(arr[i] != ans.back())
+            if(arr[i] != arr[j])
             {
-                ans.push_back(arr[i]);
+                arr[i+1] = arr[j];
+                i+=1;
             }
         }
         
-        for(int i=0; i<ans.size(); i++)
-        {
-            arr[i] = ans[i];
-        }
-        
-        return ans.size();
+        return i+1;
     }
 };
 
