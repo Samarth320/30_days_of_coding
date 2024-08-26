@@ -32,7 +32,7 @@ void solve(int num1 , int num2)
         else
             is_carry = false;
         
-        num1 /= 10;
+        num1 = num/ 10;
         num2 /= 10;
     }
     
@@ -51,3 +51,5 @@ int main() {
     
     return 0;
 }
+
+//chnages done
